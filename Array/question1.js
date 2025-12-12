@@ -1,5 +1,13 @@
 /**
  * Given N array elements, count number of elements having at least one element greater than itself.
+ *  Example:
+ * Input: arr[] = {2, 4, 9, 5, 24, 12, 8, 10}
+ * Output: 7
+ * Explanation: All elements except 24 have at least one element greater than itself.
+ * Solution:
+ * 1. Find the maximum element in the array.
+ * 2. Count how many times the maximum element occurs.
+ * 3. Subtract the count of maximum elements from the total number of elements to get the result.
  */
 
 function countElementsWithGreater(arr) {

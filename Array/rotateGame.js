@@ -9,6 +9,17 @@
   Rotate towards the right 2 times - [1, 2, 3, 4] => [4, 1, 2, 3] => [3, 4, 1, 2]
 
   Final array = [3, 4, 1, 2]
+  Example 2 :
+
+  N = 3, A = [1, 2, 2] and B = 3.
+
+  Rotate towards the right 3 times - [1, 2, 2] => [2, 1, 2] => [2, 2, 1] => [1, 2, 2]
+
+  Final array = [1, 2, 2]
+ * Solution:
+ * 1. Reverse the whole array
+ * 2. Reverse first k elements
+ * 3. Reverse remaining n-k elements
  */
 
 function rotateArray(a, b) {

@@ -1,5 +1,16 @@
 /**
  * Given an array elements and Q queries. For each query get the sum of Odd index elements in the given range
+ * Example:
+ * Input: arr[] = {-3, 6, 2, 4, 5, 2, 8, -9, 2, 1}
+ * Query1: left = 0, right = 5
+ * Output: 8
+ * Explanation: Odd index elements between index 0 to 5 are (6,4,2) and their sum is 12
+ * solution:
+ * 1. Create a prefix sum array for odd index elements
+ * 2. For each query, calculate the sum using the prefix sum array
+ *   - If left is 0, sum is PFO[right]
+ *   - Else sum is PFO[right] - PFO[left-1]
+ *
  */
 
 const getEvenIndexSum = (left, right) => {

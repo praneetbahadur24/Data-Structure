@@ -1,7 +1,22 @@
 /**
  * Given indian team score for first 10 overs of batting after every over current score is given, total run scored in last over
- *  overs 1 2 3 4 I 5 I 8 9 10
-    Score 2 8 1,4 29 3.1 49 6579 8897
+ *  Example:
+ * Input: scores[] = {2, 8, 14, 29, 31, 49, 65, 79, 88, 97}
+ * Output:
+ * Query 1: left = 10, right = 10
+ * Output: 9
+ * Explanation: Runs scored in last over is 9  (97 - 88)
+ * Query 2: left = 4, right = 10
+ * Output: 68
+ * Explanation: Runs scored in last 7 overs is 68 (97 - 29)
+ * Query 3: left = 4, right = 7
+ * Output: 36
+ * Explanation: Runs scored between 4 to 7 overs is 36 (65 - 29)
+ * solution:
+ * 1. For each query, calculate the sum using the prefix sum array
+ *   - If left is 1, sum is scores[right-1]
+ *   - Else sum is scores[right-1] - scores[left-2]
+ *
  */
 
 const scores = [2, 8, 14, 29, 31, 49, 65, 79, 88, 97];
