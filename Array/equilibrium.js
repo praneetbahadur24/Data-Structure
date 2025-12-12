@@ -1,5 +1,13 @@
 /**
  * Given N array element count no of equilibrium index
+ * An equilibrium index is an index such that the sum of elements at lower indexes is equal to the sum of elements
+ * at higher indexes.
+ *
+ * sum of left side(o, i-1) = sum of right side(i+1, n-1)
+ *
+ * Using Prefix Sum Array
+ * PF[i-1] = PF[n-1] - PF[i]
+ * Note :- if i = 0 then left sum is 0 and if i = n-1 then right sum is 0
  */
 
 const equilibriumIndex = () => {
