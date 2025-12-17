@@ -1,6 +1,17 @@
 /**
  * Given an array, arr[] of size N, the task is to find the count of array indices such that removing an element from these
  * indices makes the sum of even-indexed and odd-indexed array elements equal.
+ * Example:
+ * Input: arr[] = {2, 1, 6, 4}
+ * Output: 1
+ * Explanation: If we remove index 1 (element 1), the array becomes {2, 6, 4}.
+ * Now, sum of even-indexed elements = 2 + 4 = 6
+ * and sum of odd-indexed elements = 6
+ * Hence, there is only one special index.
+ * Solution:
+ * 1. Create two prefix sum arrays, one for even indices and another for odd indices.
+ * 2. Iterate through each index of the array and calculate the sum of even and odd indexed elements if the current index is removed.
+ * 3. Compare the sums and count how many times they are equal.
  */
 
 const specialIndex = () => {

@@ -5,6 +5,14 @@
  *
  * A = [1,2,3,4]
  *  B = 7
+ * Output = 1
+ * Explanation: (3,4) or (4,3) are the good pairs as A[2] + A[3] = 7
+ * Solution:
+ * 1. Iterate through each element of the array using two nested loops.
+ * 2. For each pair of elements (A[i], A[j]), check if their sum equals B and i is not equal to j.
+ * 3. If such a pair is found, return true.
+ * 4. If no such pair is found after checking all pairs, return false.
+ *
  *
  *
  */
